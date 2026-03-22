@@ -1,0 +1,108 @@
+@import 'leaflet/dist/leaflet.css';
+
+:root {
+  --sidebar-bg: #f4f4f4;
+  --sidebar-bg-dark: #1a1a1a;
+  --hover-bg: #e0e0e0;
+  --hover-bg-dark: #333;
+  --text-color: #242424;
+  --text-color-dark: #f0f0f0;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  color: var(--text-color);
+}
+
+.app-container.dark {
+  color: var(--text-color-dark);
+}
+
+.sidebar {
+  width: 300px;
+  padding: 1rem;
+  background-color: var(--sidebar-bg);
+  overflow-y: auto;
+}
+
+.app-container.dark .sidebar {
+  background-color: var(--sidebar-bg-dark);
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+button {
+  cursor: pointer;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  border: none;
+  background-color: #646cff;
+  color: white;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #535bf2;
+}
+
+.cafe-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.cafe-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.cafe-item:hover {
+  background-color: var(--hover-bg);
+}
+
+.app-container.dark .cafe-item:hover {
+  background-color: var(--hover-bg-dark);
+}
+
+.cafe-buttons button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  margin-right: 0.3rem;
+}
+
+.cafe-buttons a {
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.error-msg {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
